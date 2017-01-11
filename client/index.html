@@ -9,23 +9,22 @@
 <section id="GiveMeNumber">
    <label>On a scale of 1 to 10, how likely are you to recommend Green Fox Academy to a friend?</label>
    <!-- FEEDBACK WITH NUMBER  form 1 to 10-->
-   <input id="scale" type="number" min="1" max="10"
-   onKeyUp="if(this.value>10){this.value='10';}else if(this.value<1){this.value='1';}"
-   id="yourid">
+   <input id="scale" type="number" >
+
    <!-- FEEDBACK WITH NUMBER  form 1 to 10 -->
 
    <!-- FEEDBACK WITH TEXT-->
    </section>
-   <section id="feedback">
+   <section>
       <label>Describe your experience with Green Fox Academy so far</label>
-      <textarea id="encrypter" cols="30" rows="10"></textarea>
+      <textarea id="inputText" cols="30" rows="10"></textarea>
    </section>
    <!-- FEEDBACK WITH TEXT -->
 
 <!-- EMAIL Address -->
-<section id="email">
+<section>
    <label >Your email address:</label>
-   <input type="email" name="email">
+   <input id="userEmail" type="text">
 </section>
 <!-- EMAIL Address-->
    </body>
