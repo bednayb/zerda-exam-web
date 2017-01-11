@@ -8,11 +8,10 @@ var list = ["amazing", "awesome", "blithesome", "excellent", "fabulous", "fantas
 // THE FUNCTION WHAT WILL BE TESTED at test.js
 function decrypt(email,scale) {
    if(email.indexOf("@") != -1 && scale > 10 )
- {
-   return "validator accepts valid email, and good scale"
-}
-
+   {
+      return true
+   }
+   return false
 };
-
 
 module.exports = decrypt;
