@@ -12,17 +12,20 @@ app.use(bodyParser.json());
 app.use(express.static('client'));
 
 app.post('/exam', function(req, res) {
-  // console.log(req.body); // { shift: 3, text: 'oruhp lsvxp groru vlw' }
+
   var feedback = req.body.feedbackValue;
   var scale = req.body.scaleValue;
-  var email = req.body.email.Value
-  // var decrypted = decrypt(feedback,email,decrypted);
+  var email = req.body.emailValue;
+  var decrypted = validator(email,decrypted);
+  console.log(decrypted);
 
   var response = {
+     "status" : "ok",
     "feedback" : req.body.feedbackValue,
     "scale" : req.body.scaleValue,
-    "email" : req.body.email.Value
+    "email" : req.body.emailValue
   }
+  console.log(response);
    res.send(response);
 }
 );
