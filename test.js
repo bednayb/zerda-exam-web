@@ -14,7 +14,22 @@ test('true', function (t) {
   t.end();
 })
 
-test('email', function (t) {
-  t.equal(validator("toto@gmail.com",18),'validator accepts valid email, and good scale');
+test('good email', function (t) {
+  t.equal(validator("toto@gmail.com",18),true);
+  t.end();
+})
+
+test('bad email', function (t) {
+  t.equal(validator("heydudegmail.com",18),false);
+  t.end();
+})
+
+test(' more than 10 scale', function (t) {
+  t.equal(validator("toto@gmail.com",18),true);
+  t.end();
+})
+
+test(' less than 10 scale', function (t) {
+  t.equal(validator("toto@gmail.com",8),false);
   t.end();
 })
