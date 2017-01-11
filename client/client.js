@@ -5,6 +5,7 @@ var feedback = document.querySelector('#inputText');
 var scale = document.querySelector('#scale');
 var emailUser = document.querySelector('#userEmail');
 
+var loading = document.querySelector('span');
 
 button.addEventListener('click',function () {
    // CHECK IT WORKS OR NOT
@@ -13,6 +14,9 @@ button.addEventListener('click',function () {
    // console.log(feedback.value);
    // console.log(emailUser.value)
    // CHECK IT WORKS OR NOT
+
+// in the task it was not necesseary hide anytime
+loading.innerHTML = "loading";
 
    var httpRequest = new XMLHttpRequest();
  httpRequest.open('POST', 'http://localhost:3000/exam', true);
