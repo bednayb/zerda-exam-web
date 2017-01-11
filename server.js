@@ -6,6 +6,23 @@ var bodyParser = require('body-parser');
 var mysql = require('mysql');
 var validator = require('./validator.js');
 
+// MYSQL
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "'exam'",
+  password: "admin",
+  database: "secretsql"
+});
+
+con.connect(function(err){
+  if(err){
+    console.log("Error connecting to Db", err);
+    return;
+  }
+  console.log("Connection established");
+});
+// MYSQL
+
 
 var app = express();
 app.use(bodyParser.json());
@@ -31,9 +48,9 @@ app.post('/exam', function(req, res) {
           "scale" : scale,
           "email" : email
          }
-         res.send(response);
-      }
+
+   res.send(response);
    }
-);
+});
 
 app.listen(3000);
